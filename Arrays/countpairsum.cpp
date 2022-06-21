@@ -26,5 +26,5 @@ int main()
 	
 	int cnt = countpairsum(arr,size,k);
 	cout<<"Count is "<<cnt;
-	
+	return 0;
 }

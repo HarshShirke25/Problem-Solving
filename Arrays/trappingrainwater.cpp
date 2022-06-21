@@ -33,4 +33,5 @@ int main()
 	
 	int ans = trapWater(arr,size);
 	cout<<"Trapped Rainwater units are: "<<ans;
+	return 0;
 }
