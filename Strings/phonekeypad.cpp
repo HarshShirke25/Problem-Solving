@@ -16,7 +16,7 @@ void solve(string digits,string output,int index,vector<string>& ans,string mapp
     for(int i = 0; i < value.length(); i++)
     {
         output.push_back(value[i]);
-        solve(digits,output,index+1,ans,mapping);
+        solve(digits, output, index+1, ans, mapping);
         output.pop_back();
     }
 }
