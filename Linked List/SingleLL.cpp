@@ -55,6 +55,8 @@ void insert_begin()
 	
 }
 
+
+
 void insert_middle()
 {
 	struct node* temp;
@@ -192,6 +194,24 @@ void print_list()
 	}
 }
 
+void find_middle()
+{
+	struct node* p = head;
+	struct node* q = head;
+	
+	
+	while(q->next!=NULL)
+	{
+		p= p->next;
+		q = q->next;
+		if(q!=NULL)
+		{
+			q = q->next;
+		}
+	}
+	cout<<p->data;
+}
+
 int main()
 {
 	int ch,k;
@@ -199,7 +219,7 @@ int main()
 	while(1)
 	{
 		
-	cout<<"\nChoose the operations:\n1:Insert at Beginning\n2:Insert at Middle\n3:Insert at End\n4:Print the List\n5:Find kth end node\n6:Delete First\n7:Delete Middle\n8:Delete Last\n"<<endl;
+	cout<<"\nChoose the operations:\n1:Insert at Beginning\n2:Insert at Middle\n3:Insert at End\n4:Print the List\n5:Find kth end node\n6:Delete First\n7:Delete Middle\n8:Delete Last\n9:Find middle\n"<<endl;
 	cin>>ch;
 	switch(ch){
 		case 1:
@@ -230,6 +250,9 @@ int main()
 			break;
 		case 8:
 			delete_last();
+			break;
+		case 9:
+			find_middle();
 			break;
 			
 		
