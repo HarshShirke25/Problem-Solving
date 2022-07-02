@@ -196,18 +196,27 @@ void print_list()
 
 void find_middle()
 {
-	struct node* p = head;
-	struct node* q = head;
-	
-	
-	while(q->next!=NULL)
+	if(head==NULL || head->next==NULL)
 	{
-		p= p->next;
+		return;
+	}
+	if(head->next->next == NULL)
+	{
+		return;
+	}
+	struct node* p = head;
+	struct node* q = head->next;
+	
+	
+	while(q!=NULL)
+	{
+		
 		q = q->next;
 		if(q!=NULL)
 		{
 			q = q->next;
 		}
+		p = p->next;
 	}
 	cout<<p->data;
 }
