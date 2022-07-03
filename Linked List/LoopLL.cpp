@@ -38,6 +38,36 @@ void createLoop()
 	temp2->next = temp1;
 }
 
+void detectLoop()
+{
+	if(head == NULL)
+	{
+		cout<<"No elements"<<endl;
+	}
+	else
+	{
+		Node* slow = head;
+		Node* fast = head;
+		
+		while(fast->next != NULL)
+		{
+			fast = fast->next;
+			if(fast != NULL)
+			{
+				fast = fast->next;
+			}
+			slow = slow->next;
+			if(slow==fast){
+				cout<<"Loop present"<<endl;
+				return;
+			}
+			
+		}
+		cout<<"Loop not present"<<endl;
+		
+	}
+}
+
 void print()
 {
 	
@@ -76,7 +106,7 @@ int main()
 	int ch;
 	int data;
 	while(1){
-		cout<<"1:Print\n2:Create\n3:Create Loop\n";
+		cout<<"1:Print\n2:Create\n3:Create Loop\n4:Detect Loop\n";
 		cin>>ch;
 		switch(ch){
 			case 1:print();break;
@@ -84,6 +114,7 @@ int main()
 					cin>>data;
 					create(data);break;
 			case 3:createLoop();break;
+			case 4:detectLoop();break;
 	}
 	}
 	
