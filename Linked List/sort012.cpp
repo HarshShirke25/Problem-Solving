@@ -15,8 +15,6 @@ class Node{
 
 Node* head = NULL;
 
-
-
 void print()
 {
 	
