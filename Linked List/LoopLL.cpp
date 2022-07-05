@@ -143,6 +143,7 @@ void create(int data)
 		p->next = temp;
 	}
 }
+
 int main()
 {
 	int ch;
