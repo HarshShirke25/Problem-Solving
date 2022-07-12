@@ -13,17 +13,16 @@ struct Node
     }
 };
  
-void postorder(Node* root)
+void preorder(Node* root)
 {
     if (root == NULL) {
         return;
     }
- 		
-    postorder(root->left);
+ 	cout << root->data << " ";
+ 	
+    preorder(root->left);
  
-    postorder(root->right);
-    
-    cout << root->data << " ";
+    preorder(root->right);
 }
  
 int main()
@@ -50,7 +49,7 @@ int main()
     root->right->left->left = new Node(7);
     root->right->left->right = new Node(8);
  
-    postorder(root);
+    preorder(root);
  
     return 0;
 }
