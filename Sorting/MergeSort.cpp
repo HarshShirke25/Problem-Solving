@@ -7,7 +7,8 @@ void merge(int arr[], int p, int q, int r) {
   int n1 = q - p + 1;
   int n2 = r - q;
 
-  int L[n1], M[n2];
+  int* L = new int(n1);
+  int* M = new int(n2);
 
   for (int i = 0; i < n1; i++)
     L[i] = arr[p + i];
@@ -46,16 +47,16 @@ void merge(int arr[], int p, int q, int r) {
 }
 
 
-void mergeSort(int arr[], int l, int r) {
-  if (l < r) {
+void mergeSort(int arr[], int s, int e) {
+  if (s < e) {
 
-    int m = l + (r - l) / 2;
+    int m = s + (e - s) / 2;
 
-    mergeSort(arr, l, m);
-    mergeSort(arr, m + 1, r);
+    mergeSort(arr, s, m);
+    mergeSort(arr, m + 1, e);
 
   
-    merge(arr, l, m, r);
+    merge(arr, s, m, e);
   }
 }
 
@@ -77,3 +78,6 @@ int main() {
   printArray(arr, size);
   return 0;
 }
+
+
+

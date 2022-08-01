@@ -57,8 +57,8 @@ void quickSort(int arr[], int start, int end)
 int main()
 {
 
-	int arr[] = { 9, 3, 4, 2, 1, 8 };
-	int n = 6;
+	int arr[] = { 5,4,3,2,1 };
+	int n = 5;
 
 	quickSort(arr, 0, n - 1);
 
