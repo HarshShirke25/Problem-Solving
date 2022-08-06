@@ -17,8 +17,8 @@ string removeCharacters(string S, char c)
 int main()
 {
 
-	string S = "GFG is Fun";
-	char C = 'F';
+	string S = "BACGTABHO";
+	char C = 'A';
 	cout << "String Before: " << S << endl;
 
 	
